@@ -12,17 +12,17 @@
 public class Vehicle {
 
     /**
-    * The colour of the vehicle.
-    */
-    private String colour;
-
-    /**
     * The current speed.
     * Protected is similar to private, but it is avaiable to subclasses as
     * well. It is not available anywehre outside of this class and its
     * subclasses.
     */
     protected int speed;
+
+    /**
+    * The colour of the vehicle.
+    */
+    private String colour;
 
     /**
     * The max speed.

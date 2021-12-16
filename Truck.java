@@ -15,9 +15,18 @@ public class Truck extends Vehicle {
     */
     private static String licensePlate;
 
-    public Truck(final String startColour, final int startMaxSpeed, final String startLicensePlate) {
+    /**
+    * This is the constructor.
+    *
+    * @param startColour the original colour of the truck
+    * @param startMaxSpeed the maximum speed the vehicle hcan go
+    * @param startLicensePlate the original license plate of the truck
+    */
+    public Truck(final String startColour, final int startMaxSpeed,
+                 final String startLicensePlate) {
         super(startColour, startMaxSpeed);
         licensePlate = startLicensePlate;
+        super.speed = 0;
     }
 
     /**
@@ -31,6 +40,8 @@ public class Truck extends Vehicle {
 
     /**
     * Sets the licensePlate.
+    *
+    * @param newLicensePlate the new licens plate
     */
     public void setLicensePlate(final String newLicensePlate) {
         licensePlate = newLicensePlate;
@@ -40,14 +51,14 @@ public class Truck extends Vehicle {
     * Applies the air brakes.
     *
     * @param amountOfAir this is the amount to which the brake has
-    * been applied
+    *     been applied
     */
     public void provideAir(final int amountOfAir) {
         if (amountOfAir * 2 > super.getSpeed()) {
             System.out.println("Cannot use air brake that amount."
-                               + " It is more than the speed");
+                + " It is more than the speed");
         } else {
-            super.speed = (super.getSpeed() - amountOfAir * 2);
+            super.speed = super.getSpeed() - amountOfAir * 2;
         }
     }
 }

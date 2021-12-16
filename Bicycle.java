@@ -17,6 +17,9 @@ public class Bicycle extends Vehicle {
 
     /**
     * Calls the constructor of Airplane, Jet's superclass.
+    *
+    * @param startColour the starting colour of the bike
+    * @param startMaxSpeed the maximum speed of the bike
     */
     public Bicycle(final String startColour, final int startMaxSpeed) {
         super(startColour, startMaxSpeed);
@@ -25,6 +28,8 @@ public class Bicycle extends Vehicle {
 
     /**
     * Gets the cadence.
+    *
+    * @return gets the cadence
     */
     public int getCadence() {
         return cadence;
@@ -32,6 +37,8 @@ public class Bicycle extends Vehicle {
 
     /**
     * Sets the cadence.
+    *
+    * @param newCadence the new cadence
     */
     public void setCadence(final int newCadence) {
         cadence = newCadence;
