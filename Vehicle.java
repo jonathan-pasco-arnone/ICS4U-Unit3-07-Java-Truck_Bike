@@ -9,7 +9,7 @@
 /**
 * This is the class that contains many functions.
 */
-public final class Vehicle {
+public class Vehicle {
 
     /**
     * The colour of the vehicle.
@@ -18,8 +18,11 @@ public final class Vehicle {
 
     /**
     * The current speed.
+    * Protected is similar to private, but it is avaiable to subclasses as
+    * well. It is not available anywehre outside of this class and its
+    * subclasses.
     */
-    private int speed;
+    protected int speed;
 
     /**
     * The max speed.
@@ -29,12 +32,10 @@ public final class Vehicle {
     /**
     * This function takes the initial values of a vehicle.
     *
-    * @param startLicensePlate the starting license plate number
     * @param startColour the starting colour
-    * @param startDoorQuantity the number of doors on the vehicle
     * @param vehicleMaxSpeed the maximum speed of the car
     */
-    public Vehicle(final String startColour, inal int vehicleMaxSpeed) {
+    public Vehicle(final String startColour, final int vehicleMaxSpeed) {
         colour = startColour;
         speed = 0;
         maxSpeed = vehicleMaxSpeed;
@@ -101,7 +102,7 @@ public final class Vehicle {
     */
     public void accelerate(final int acceleration) {
         if (acceleration + speed > maxSpeed) {
-            System.out.println("\nCannot accelerate more"
+            System.out.println("Cannot accelerate more"
                 + " than the maximum speed");
         } else {
             speed = speed + acceleration;
@@ -115,7 +116,7 @@ public final class Vehicle {
     */
     public void brake(final int brakeAmount) {
         if (brakeAmount > speed) {
-            System.out.println("\nCannot brake more than the current speed");
+            System.out.println("Cannot brake more than the current speed");
         } else {
             speed = speed - brakeAmount;
         }

@@ -33,5 +33,26 @@ final class Main {
     */
     public static void main(final String[] args) {
 
+        final int five = 5;
+        final int oneHundred = 100;
+
+        final Truck cheif = new Truck("Blue", 210, "BAZINGA");
+        final Bicycle zeus = new Bicycle("Red", 30);
+
+        cheif.accelerate(oneHundred);
+        System.out.println("\nChief (the truck's name) has accelerated to "
+                           + "a speed of " + cheif.getSpeed());
+        cheif.provideAir(five);
+        
+        System.out.println("Chief has used his air brakes to a degree of 5 "
+                           + "and now has a speed of " + cheif.getSpeed());
+
+        System.out.println("\nZeus (the bike's name) has a max speed of "
+                           + zeus.getMaxSpeed());
+        System.out.println("Zeus is attempting to accelerate to 50");
+        zeus.accelerate(50);
+
+        System.out.println("\nZeus is about to be rung...");
+        zeus.ringBell();
     }
 }
